@@ -39,3 +39,140 @@ The standard Git workflow consists of five primary commands.
 | **Commit** | `git commit -m "Commit message"` | Saves the staged changes to the local repository with a descriptive message. |
 | **Push** | `git push origin <branch-name>` | Uploads local commits to the remote repository (GitHub). |
 | **Pull** | `git pull origin <branch-name>` | Fetches and merges changes from the remote repository into your local repository. |
+
+## 4. Branching and Merging
+
+Branching allows developers to work on new features without affecting the main codebase.
+
+### Feature Branches
+
+Feature branches are created to develop new features or fix bugs independently from the main branch.
+
+**Create and switch to a new branch:**
+
+```bash
+git checkout -b <branch-name>
+```
+
+Example:
+
+```bash
+git checkout -b leaf
+```
+
+**View all branches:**
+
+```bash
+git branch
+```
+
+**Switch to an existing branch:**
+
+```bash
+git checkout <branch-name>
+```
+
+Example:
+
+```bash
+git checkout master
+```
+
+---
+
+### Merging
+
+Merging combines the changes from one branch into another.
+
+**Merge a branch into the current branch:**
+
+```bash
+git merge <branch-name>
+```
+
+Example:
+
+```bash
+git checkout master
+git merge leaf
+```
+
+> **Note:** Before merging, switch to the branch that should receive the changes (for example, `master`).
+
+---
+
+### Pull Requests (PR)
+
+A **Pull Request (PR)** is a request to merge changes from one branch into another. It is commonly used for code reviews and collaboration before merging code.
+
+There is no Git command to create a Pull Request. PRs are created on Git hosting platforms such as **GitHub** after pushing your branch.
+
+**Push the feature branch to GitHub:**
+
+```bash
+git push origin <branch-name>
+```
+
+Example:
+
+```bash
+git push origin leaf
+```
+
+After pushing, open GitHub and click **Compare & pull request** to create the Pull Request.
+
+## 5. Sample Review Exercise
+
+### 1. Initialize the Repository
+
+Creating a new folder and initializing it as a Git repository.
+
+```bash
+mkdir my-project
+cd my-project
+git init
+```
+This creates a hidden '.git' folder that will basically allow git to keep track of the project folder.
+
+### 2. Add a File and Make the First Commit
+
+```bash
+touch a.txt
+git add a.txt
+git commit -m "Add initial file a.txt"
+```
+The 'git add' command stages the file and sends it to staging area while the 'git commit' command saves the changes in the git repo history.
+
+### Step 3: Create a New Branch
+
+```bash
+git checkout leaf
+```
+The 'git checkout' command allows us to swicth to the leaf branch directly.
+
+### 4. Add a File and Commit on the New Branch
+
+```bash
+touch b.txt
+git add b.txt
+git commit -m "Add b.txt on leaf branch"
+```
+### Step 5: Merge the Branch into Master
+
+Switching back to the main branch and merging the feature branch.
+
+```bash
+git checkout master
+git merge leaf
+```
+Due to this merging the entire history of the "leaf" branch is integrated into the "master" branch.
+
+## 6. Checking Understanding
+
+### What is the Staging Area?
+The staging area is basically a sort of temporary middle layer where all the changes that were made in the files are managed and organised before they are permanently saved in the git repositry.
+
+### Where is `HEAD` Right Now?
+In Git, 'HEAD' is a pointer to the most recent commit on the branch you are currently working on.So by that logic, 'HEAD' points to the merge commit on the `master` branch.
+
+
