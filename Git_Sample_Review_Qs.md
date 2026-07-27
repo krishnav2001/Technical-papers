@@ -173,6 +173,9 @@ Due to this merging the entire history of the "leaf" branch is integrated into t
 The staging area is basically a sort of temporary middle layer where all the changes that were made in the files are managed and organised before they are permanently saved in the git repositry.
 
 ### Where is `HEAD` Right Now?
-In Git, 'HEAD' is a pointer to the most recent commit on the branch you are currently working on.So by that logic, 'HEAD' points to the merge commit on the `master` branch.
+In Git, 'HEAD' is a pointer to the most recent commit on the branch you are currently working on.So by that logic, 'HEAD' points to the merge commit on the 'master' branch.
 
 
+
+# RESOURCES
+https://www.youtube.com/watch?v=RGOj5yH7evk
