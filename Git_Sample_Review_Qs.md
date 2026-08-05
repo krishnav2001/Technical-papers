@@ -26,7 +26,7 @@ The working directory is where new files are created, old files are deleted, or 
 The staging area is basically a sort of temporary middle layer where all the changes that were made in the files are managed and organised before they are permanently saved in the git repositry.
 
 ### Commit area
-nce the changes are complete​, the staging area will contain one or more files that need to be committed. Creating a commit will cause Git to take the new code from the staging area and make the commit to the main repository​. This commit is then moved to the commit area.
+once the changes are complete​, the staging area will contain one or more files that need to be committed. Creating a commit will cause Git to take the new code from the staging area and make the commit to the main repository​. This commit is then moved to the commit area.
 
 ## 3. The Git Lifecycle
 
